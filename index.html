@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rakenna-html</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./layout.css" />
+  </head>
+  <body>
+    <script>
+      const body = document.getElementsByTagName("body")[0];
+
+      const div1 = document.createElement("div");
+      div1.setAttribute("id", "div1");
+      body.appendChild(div1);
+
+      const header = document.createElement("header");
+      header.setAttribute("id", "ylatunniste");
+
+      const h1 = document.createElement("h1");
+      const otsikkoteksti = document.createTextNode(
+        "Tämä on artikkelin otsikko"
+      );
+      const para1 = document.createElement("p");
+      para1.setAttribute("id", "p1");
+      const node1 = document.createTextNode(
+        "Ensimmäinen kappale! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione harum voluptatum odio velit. Veniam modi maxime natus aut minus maiores necessitatibus recusandae dolorum!"
+      );
+
+      div1.appendChild(header);
+      header.appendChild(h1);
+      h1.appendChild(otsikkoteksti);
+      header.appendChild(para1);
+      para1.appendChild(node1);
+
+      const flexbox = document.createElement("section");
+      flexbox.setAttribute("id", "flexbox");
+      div1.appendChild(flexbox);
+      const para2 = document.createElement("p");
+      para2.setAttribute("id", "p2");
+      flexbox.appendChild(para2);
+
+      const node2 = document.createTextNode(
+        "Toinen kappale! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione harum voluptatum odio velit. Veniam modi maxime natus aut minus maiores necessitatibus recusandae dolorum!"
+      );
+      para2.appendChild(node2);
+
+      const figure = document.createElement("figure");
+      const image = document.createElement("img");
+      image.src = "./image.jpg";
+
+      flexbox.appendChild(figure);
+      figure.appendChild(image);
+
+      const para3 = document.createElement("p");
+      para3.setAttribute("id", "p3");
+      div1.appendChild(para3);
+      const node3 = document.createTextNode("Macce 2023");
+      para3.appendChild(node3);
+    </script>
+  </body>
+</html>

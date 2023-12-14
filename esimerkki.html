@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rakenna-html</title>
+  </head>
+  <body>
+    <script>
+      const body = document.getElementsByTagName("body")[0];
+
+      const div1 = document.createElement("div");
+      div1.setAttribute("id", "Div1");
+      body.appendChild(div1);
+
+      const para1 = document.createElement("p");
+      para1.setAttribute("id", "p1");
+      div1.appendChild(para1);
+
+      const para2 = document.createElement("p");
+      para2.setAttribute("id", "p2");
+      div1.appendChild(para2);
+
+      const para3 = document.createElement("p");
+      para3.setAttribute("id", "p3");
+      div1.appendChild(para3);
+
+      const node1 = document.createTextNode("teksti1");
+      para1.appendChild(node1);
+
+      const node2 = document.createTextNode("teksti2");
+      para2.appendChild(node2);
+    </script>
+  </body>
+</html>
